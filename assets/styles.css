@@ -1,7 +1,7 @@
 :root{--bg:#EDF2FE;--a1:#8B83FD;--a2:#B7B2FD;--af:#C9C6FF00;--text:#0F172A;--muted:#475569;--radius:16px;--shadow:0 12px 30px rgba(17,24,39,.12)}
 *{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden;scroll-behavior:smooth}
+html { height: 100%; overflow-x: hidden; }
+body{height:100%;margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden;width:100%;position:relative;scroll-behavior:smooth}
 body::before{content:"";position:fixed;inset:-25%;pointer-events:none;background:radial-gradient(1200px 520px at 10% 18%,var(--a1) 0%,var(--a2) 40%,var(--af) 70%),radial-gradient(900px 420px at 90% 60%,var(--a2) 0%,var(--a1) 35%,var(--af) 70%);filter:blur(70px);opacity:.28;animation:float 14s ease-in-out infinite alternate}
 @keyframes float{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(2%,-2%,0)}}
 
