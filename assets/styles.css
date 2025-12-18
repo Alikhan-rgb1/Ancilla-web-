@@ -168,9 +168,9 @@ h2::after{content:"";display:block;height:3px;width:96px;margin-top:8px;border-r
   .problem-item .problem-image img { height: 100%; object-fit: cover; }
 
   /* Solution */
-  .solution-wrap { grid-template-columns: 1fr; gap: 32px; }
-  .solution-media { width: 100%; order: -1; } /* Images on top */
-  .solution-media .media-row { justify-content: center; gap: 12px; }
+  .solution-wrap { display: flex; flex-direction: column; gap: 40px; }
+  .solution-media { width: 100%; margin-bottom: 10px; }
+  .solution-media .media-row { justify-content: center; gap: 16px; }
   .solution-media .img-primary, .solution-media .img-secondary { 
     flex: 0 1 auto; 
     width: 45%; 
