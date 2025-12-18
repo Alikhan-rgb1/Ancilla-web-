@@ -168,29 +168,45 @@ h2::after{content:"";display:block;height:3px;width:96px;margin-top:8px;border-r
   .problem-item .problem-image img { height: 100%; object-fit: cover; }
 
   /* Solution */
-  .solution-wrap { grid-template-columns: 1fr; gap: 40px; }
-  .solution-media { width: 100%; }
+  .solution-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .solution-media { width: 100%; order: -1; } /* Images on top */
   .solution-media .media-row { justify-content: center; gap: 12px; }
-  .solution-media .img-primary, .solution-media .img-secondary { flex: 0 0 calc(50% - 6px); height: auto; aspect-ratio: 3/5; object-fit: cover; border-radius: 30px; }
+  .solution-media .img-primary, .solution-media .img-secondary { 
+    flex: 0 1 auto; 
+    width: 45%; 
+    max-width: 180px; 
+    height: auto; 
+    border-radius: 24px; 
+    box-shadow: 0 8px 20px rgba(17,24,39,0.1);
+  }
+  .solution-item { padding: 16px; }
   
   /* Steps */
-  .steps { grid-template-columns: 1fr; gap: 16px; }
-  .steps li { padding: 20px; }
-  .steps li > div { padding: 0 0 0 54px; }
-  .steps li::before { width: 40px; height: 40px; top: 16px; left: 16px; font-size: 18px; }
+  .steps { grid-template-columns: 1fr; gap: 12px; }
+  .steps li { padding: 16px; }
+  .steps li > div { padding: 0 0 0 48px; } /* Reduced left padding */
+  .steps li::before { width: 36px; height: 36px; top: 16px; left: 16px; font-size: 16px; }
 
   /* Market */
   .market-wrap { grid-template-columns: 1fr; gap: 32px; }
   .market-media { order: -1; justify-content: center; }
-  .market-illustration { max-height: 300px; }
+  .market-illustration { max-height: 240px; }
   .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .stat { width: 100%; padding: 16px; }
-  .stat .num { font-size: 24px; }
-  .stat .label { font-size: 13px; text-align: center; }
+  .stat { width: 100%; padding: 14px; }
+  .stat .num { font-size: 20px; }
+  .stat .label { font-size: 12px; text-align: center; }
 
   /* Business */
-  .cards { grid-template-columns: 1fr; gap: 16px; }
-  .card { padding: 24px; }
+  .cards { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 16px; } /* Reduced padding */
+  .card h3 { margin-bottom: 12px; }
+  .card ol { margin-top: 0; }
+  .card ol li { 
+    padding-left: 24px; 
+    font-size: 14px; 
+    margin: 8px 0;
+  }
+  .card ol li::before { width: 14px; height: 14px; top: 6px; transform: none; }
 
   /* Promo */
   .promo-hero .brand { font-size: 36px; }
