@@ -133,6 +133,7 @@ h2::after{content:"";display:block;height:3px;width:96px;margin-top:8px;border-r
   .solution-media{grid-column:auto;align-items:flex-start}
   .solution-list{grid-column:auto}
   .solution-media .img-primary,.solution-media .img-secondary{height:auto;max-width:100%}
+  .steps, .cards { grid-template-columns: 1fr !important; }
 }
 
 @media(max-width:768px){
